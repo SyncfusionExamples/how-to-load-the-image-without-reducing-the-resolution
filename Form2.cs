@@ -64,6 +64,7 @@ namespace GridGroupingRebind
                 dr[5] = scountry[r.Next(0, 5)];
                 dr[6] = r.Next(1000, 2000);
                 dr[7] = r.Next(10 + (r.Next(600000, 600100)));
+                //Adding image as Byte[] array.
                 Byte[] imageArray = System.IO.File.ReadAllBytes(FindFile(@"flower" + l % 3 + ".jpg"));
                 dr[8] = imageArray;
                 dt.Rows.Add(dr);
