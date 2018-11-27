@@ -17,6 +17,10 @@ namespace GridGroupingRebind
         public Form2()
         {
             InitializeComponent();
+            this.gridControl1.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Metro;
+            gridControl1.ThemesEnabled = true;
+            GridTextBoxCellRenderer ren = gridControl1.CellRenderers["TextBox"] as GridTextBoxCellRenderer;
+            gridControl1.TableStyle.VerticalAlignment = GridVerticalAlignment.Middle;
             gridControl1.RowCount = 10;
             gridControl1.ColCount = 9;
             this.gridControl1.DefaultRowHeight = 150;
@@ -31,6 +35,13 @@ namespace GridGroupingRebind
                     this.gridControl1[i, j].CellValue = dt.Rows[i - 1][j - 1];
                 }
             }
+        }
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form2());
         }
 
         #region "Create DataTable"
