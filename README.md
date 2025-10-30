@@ -1,4 +1,3 @@
-
 # How to Load the Image without Reducing the Resolution in WinForm GridControl?
 
 This example demonstrates that how to load the image without reducing the resolution in [WinForms GridControl](https://www.syncfusion.com/winforms-ui-controls/grid-control).
